@@ -344,8 +344,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
-    // debugimplementation(project(path: "CordovaLib", configuration: "debug")) // added from the jidesh doc
-    // releaseimplementation(project(path: "CordovaLib", configuration: "release")) // added from the jidesh doc
+    //debugimplementation(project(path: "CordovaLib", configuration: "debug")) // added from the jidesh doc
+    //releaseimplementation(project(path: "CordovaLib", configuration: "release")) // added from the jidesh doc
 
     if (cdvHelpers.getConfigPreference('GradlePluginKotlinEnabled', 'false').toBoolean()) {
         implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -426,6 +426,8 @@ if (hasProperty('postBuildExtras')) {
     postBuildExtras()
 }
 
-if (cdvHelpers.getConfigPreference('GradlePluginGoogleServicesEnabled', 'false').toBoolean()) {
+if (cdvHelpers.getConfigPreference('GradlePluginGoogleServicesEnabled', 'true').toBoolean()) {
     apply plugin: 'com.google.gms.google-services'
 }
+
+//apply plugin: 'com.google.gms.google-services'

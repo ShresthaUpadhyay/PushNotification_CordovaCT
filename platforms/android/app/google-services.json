@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055953925629",
+    "project_id": "cordovact-30691",
+    "storage_bucket": "cordovact-30691.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055953925629:android:4e2d096b8002fff3c31594",
+        "android_client_info": {
+          "package_name": "com.shrestha.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055953925629-dghnq0tv8qpblkofbubhi4tob5upsrvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5gPyVbNwqSKb9vmlzJUJmKbeht20V-cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055953925629-dghnq0tv8qpblkofbubhi4tob5upsrvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
