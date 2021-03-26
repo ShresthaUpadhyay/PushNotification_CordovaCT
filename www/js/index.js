@@ -29,4 +29,5 @@ function onDeviceReady() {
 
     CleverTap.onUserLogin({ 'Name': 'ShreCordova', 'Identity': '668668', 'Email': 'shre@s.com', 'custom1': 456 ,'MSG-push': true}); //added by jidesh doc
     CleverTap.createNotificationChannel("123", "CleverTap", "This is a test channel", 5, true);
+    CleverTap.setDebugLevel(3);
 }

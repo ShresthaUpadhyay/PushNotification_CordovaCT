@@ -11,6 +11,14 @@
             {
               "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"FirebaseAnalytics\"><param name=\"android-package\" value=\"by.chemerisuk.cordova.firebase.FirebaseAnalyticsPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"FirebaseMessaging\"><param name=\"android-package\" value=\"by.chemerisuk.cordova.firebase.FirebaseMessagingPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -20,6 +28,18 @@
           "/*": [
             {
               "xml": "<feature name=\"CleverTapPlugin\"><param name=\"android-package\" value=\"com.clevertap.cordova.CleverTapPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"GradlePluginGoogleServicesEnabled\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"GradlePluginGoogleServicesVersion\" value=\"4.3.3\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"AndroidXEnabled\" value=\"true\" />",
               "count": 1
             }
           ]
@@ -65,6 +85,28 @@
             {
               "xml": "<receiver android:enabled=\"true\" android:exported=\"false\" android:name=\"com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver\"></receiver>",
               "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"firebase_analytics_collection_enabled\" android:value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"google_analytics_automatic_screen_reporting_enabled\" android:value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
+              "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"com.google.firebase.messaging.default_notification_channel_id\" android:value=\"default\" />",
+              "count": 1
+            }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
             }
           ]
         }
@@ -81,6 +123,23 @@
       "CLEVERTAP_REGION": " ",
       "FIREBASE_MESSAGING_VERSION": "20.2.4",
       "PACKAGE_NAME": "com.shrestha.myapp"
+    },
+    "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "com.shrestha.myapp"
+    },
+    "cordova-plugin-firebase-analytics": {
+      "ANALYTICS_COLLECTION_ENABLED": "true",
+      "AUTOMATIC_SCREEN_REPORTING_ENABLED": "true",
+      "ANDROID_FIREBASE_ANALYTICS_VERSION": "18.0.+",
+      "PACKAGE_NAME": "com.shrestha.myapp"
+    },
+    "cordova-plugin-firebase-messaging": {
+      "ANDROID_FIREBASE_MESSAGING_VERSION": "21.0.+",
+      "ANDROIDX_CORE_VERSION": "1.3.+",
+      "ANALYTICS_COLLECTION_ENABLED": "true",
+      "AUTOMATIC_SCREEN_REPORTING_ENABLED": "true",
+      "ANDROID_FIREBASE_ANALYTICS_VERSION": "18.0.+",
+      "PACKAGE_NAME": "com.shrestha.myapp"
     }
   },
   "dependent_plugins": {},
@@ -92,10 +151,29 @@
       "clobbers": [
         "CleverTap"
       ]
+    },
+    {
+      "id": "cordova-plugin-firebase-analytics.FirebaseAnalytics",
+      "file": "plugins/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js",
+      "pluginId": "cordova-plugin-firebase-analytics",
+      "merges": [
+        "cordova.plugins.firebase.analytics"
+      ]
+    },
+    {
+      "id": "cordova-plugin-firebase-messaging.FirebaseMessaging",
+      "file": "plugins/cordova-plugin-firebase-messaging/www/FirebaseMessaging.js",
+      "pluginId": "cordova-plugin-firebase-messaging",
+      "merges": [
+        "cordova.plugins.firebase.messaging"
+      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-whitelist": "1.3.4",
-    "clevertap-cordova": "2.3.3"
+    "clevertap-cordova": "2.3.3",
+    "cordova-support-android-plugin": "1.0.2",
+    "cordova-plugin-firebase-analytics": "5.0.0",
+    "cordova-plugin-firebase-messaging": "5.0.1"
   }
 }
